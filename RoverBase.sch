@@ -14,31 +14,15 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector_Generic:Conn_01x02 J1
-U 1 1 5F777BC5
-P 2200 1050
-F 0 "J1" H 2280 1042 50  0000 L CNN
-F 1 "Conn_01x02" H 2280 951 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2200 1050 50  0001 C CNN
-F 3 "~" H 2200 1050 50  0001 C CNN
-F 4 "nf" H 2200 1050 50  0001 C CNN "SPN"
-F 5 "nf" H 2200 1050 50  0001 C CNN "MPN"
-F 6 "dnf" H 2200 1050 50  0001 C CNN "fit_field"
-	1    2200 1050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2000 1150 1800 1150
-$Comp
 L power:GND #PWR02
 U 1 1 5F778348
-P 2000 1050
-F 0 "#PWR02" H 2000 800 50  0001 C CNN
-F 1 "GND" V 2005 922 50  0000 R CNN
-F 2 "" H 2000 1050 50  0001 C CNN
-F 3 "" H 2000 1050 50  0001 C CNN
-	1    2000 1050
-	0    1    1    0   
+P 1500 900
+F 0 "#PWR02" H 1500 650 50  0001 C CNN
+F 1 "GND" V 1505 772 50  0000 R CNN
+F 2 "" H 1500 900 50  0001 C CNN
+F 3 "" H 1500 900 50  0001 C CNN
+	1    1500 900 
+	-1   0    0    1   
 $EndComp
 Text Notes 8750 3750 0    50   ~ 0
 M1
@@ -46,7 +30,7 @@ Text Notes 8700 3100 0    50   ~ 0
 M2
 Text Notes 750  3150 0    50   ~ 0
 2x2 18650 Batteries. Thus 7.5-8.5V @ 5000mAh
-Text Notes 2150 950  0    50   ~ 0
+Text Notes 900  1150 0    50   ~ 0
 Charging Port
 $Comp
 L Sensor_Current:ACS711xLCTR-12AB U2
@@ -282,8 +266,6 @@ $EndComp
 Wire Wire Line
 	4500 1350 4500 1450
 Wire Wire Line
-	1800 1150 1800 1300
-Wire Wire Line
 	3950 1300 3650 1300
 Connection ~ 3650 1300
 Wire Wire Line
@@ -383,8 +365,6 @@ $EndComp
 Wire Wire Line
 	2700 2650 2700 1300
 Connection ~ 2700 1300
-Wire Wire Line
-	2700 1300 1800 1300
 Wire Wire Line
 	3950 2600 3850 2600
 $Comp
@@ -1481,10 +1461,7 @@ Wire Wire Line
 Wire Wire Line
 	1450 2800 1600 2800
 Wire Wire Line
-	1800 1300 1450 1300
-Wire Wire Line
 	1450 1300 1450 1800
-Connection ~ 1800 1300
 Connection ~ 1450 1800
 Wire Wire Line
 	1850 1800 1850 1650
@@ -1686,14 +1663,41 @@ Connection ~ 6350 2100
 Wire Wire Line
 	7550 3900 8550 3900
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0104
 U 1 1 5FFBA6CD
 P 10350 5200
-F 0 "#PWR?" H 10350 4950 50  0001 C CNN
+F 0 "#PWR0104" H 10350 4950 50  0001 C CNN
 F 1 "GND" H 10355 5027 50  0000 C CNN
 F 2 "" H 10350 5200 50  0001 C CNN
 F 3 "" H 10350 5200 50  0001 C CNN
 	1    10350 5200
 	0    1    1    0   
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J8
+U 1 1 5FF9B4C5
+P 2100 1100
+F 0 "J8" V 2064 1012 50  0000 R CNN
+F 1 "Conn_01x01" V 1973 1012 50  0000 R CNN
+F 2 "Connector_Pin:Pin_D1.3mm_L11.0mm" H 2100 1100 50  0001 C CNN
+F 3 "~" H 2100 1100 50  0001 C CNN
+	1    2100 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J1
+U 1 1 5FF9D287
+P 1500 1100
+F 0 "J1" V 1372 1180 50  0000 L CNN
+F 1 "Conn_01x01" V 1463 1180 50  0000 L CNN
+F 2 "Connector_Pin:Pin_D1.3mm_L11.0mm" H 1500 1100 50  0001 C CNN
+F 3 "~" H 1500 1100 50  0001 C CNN
+	1    1500 1100
+	0    1    1    0   
+$EndComp
+Connection ~ 2100 1300
+Wire Wire Line
+	2100 1300 2700 1300
+Wire Wire Line
+	1450 1300 2100 1300
 $EndSCHEMATC
