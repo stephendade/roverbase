@@ -141,10 +141,10 @@ U 1 1 5FB22C18
 P 7450 650
 F 0 "J2" V 7414 262 50  0000 R CNN
 F 1 "Conn_01x06" V 7323 262 50  0000 R CNN
-F 2 "Connector_JST:JST_GH_SM06B-GHS-TB_1x06-1MP_P1.25mm_Horizontal" H 7450 650 50  0001 C CNN
+F 2 "Connector_JST:JST_GH_BM06B-GHS-TBT_1x06-1MP_P1.25mm_Vertical" H 7450 650 50  0001 C CNN
 F 3 "~" H 7450 650 50  0001 C CNN
-F 4 "SM06B-GHS-TB(LF)(SN)" H 7450 650 50  0001 C CNN "MPN"
-F 5 "455-1568-1-ND" H 7450 650 50  0001 C CNN "SPN"
+F 4 "" H 7450 650 50  0001 C CNN "MPN"
+F 5 "" H 7450 650 50  0001 C CNN "SPN"
 	1    7450 650 
 	0    -1   -1   0   
 $EndComp
@@ -173,7 +173,7 @@ Wire Wire Line
 Wire Wire Line
 	7450 850  7450 1150
 Wire Wire Line
-	7450 1150 5600 1150
+	7450 1150 6750 1150
 $Comp
 L Regulator_Switching:TPS565208 U4
 U 1 1 5FB3A52B
@@ -1762,4 +1762,48 @@ Connection ~ 9500 4900
 Wire Wire Line
 	9250 3650 9450 3650
 Connection ~ 9450 3650
+$Comp
+L Connector_Generic:Conn_01x06 J9
+U 1 1 6022697D
+P 6750 650
+F 0 "J9" V 6714 262 50  0000 R CNN
+F 1 "Conn_01x06" V 6623 262 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 6750 650 50  0001 C CNN
+F 3 "~" H 6750 650 50  0001 C CNN
+F 4 "" H 6750 650 50  0001 C CNN "MPN"
+F 5 "" H 6750 650 50  0001 C CNN "SPN"
+	1    6750 650 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6950 850  7050 850 
+Wire Wire Line
+	6550 850  6650 850 
+Wire Wire Line
+	6750 850  6750 1150
+Connection ~ 6750 1150
+Wire Wire Line
+	6750 1150 5600 1150
+Wire Wire Line
+	6850 850  6850 1350
+Wire Wire Line
+	6850 1350 7050 1350
+Connection ~ 7050 1350
+Wire Wire Line
+	6550 850  6550 1000
+Connection ~ 6550 850 
+$Comp
+L power:GND #PWR0107
+U 1 1 60254ABC
+P 7050 850
+F 0 "#PWR0107" H 7050 600 50  0001 C CNN
+F 1 "GND" H 7055 677 50  0000 C CNN
+F 2 "" H 7050 850 50  0001 C CNN
+F 3 "" H 7050 850 50  0001 C CNN
+	1    7050 850 
+	1    0    0    -1  
+$EndComp
+Connection ~ 7050 850 
+Text Label 6550 1000 1    50   ~ 0
+FC_5V
 $EndSCHEMATC
