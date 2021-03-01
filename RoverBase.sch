@@ -105,7 +105,7 @@ Wire Wire Line
 Wire Wire Line
 	5600 1400 5600 1150
 Text Notes 7950 1300 0    50   ~ 0
-Flight Controller Power (5.1V, 3A)
+Flight Controller Power (5.3V, 3A)
 Wire Wire Line
 	5800 2400 6150 2400
 Wire Wire Line
@@ -132,7 +132,7 @@ F 3 "" H 8850 2150 50  0001 C CNN
 	1    8850 2150
 	1    0    0    -1  
 $EndComp
-Text Notes 6450 3800 0    50   ~ 0
+Text Notes 6400 3550 0    50   ~ 0
 Brushed ESC (DRV8838) passthrough with switch via NSleep x2
 Text Notes 4500 6500 0    50   ~ 0
 BEC Output 5.1V 3A
@@ -905,11 +905,11 @@ L Device:R R10
 U 1 1 5FC5BECD
 P 10300 1750
 F 0 "R10" H 10370 1796 50  0000 L CNN
-F 1 "56.2k" H 10370 1705 50  0000 L CNN
+F 1 "59k" H 10370 1705 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" V 10230 1750 50  0001 C CNN
 F 3 "~" H 10300 1750 50  0001 C CNN
-F 4 "CRCW040256K2FKED" H 10300 1750 50  0001 C CNN "MPN"
-F 5 "541-5017-1-ND" H 10300 1750 50  0001 C CNN "SPN"
+F 4 "CRCW040259K0FKED" H 10300 1750 50  0001 C CNN "MPN"
+F 5 "541-59.0KLCT-ND" H 10300 1750 50  0001 C CNN "SPN"
 F 6 "Vishay Dale" H 10300 1750 50  0001 C CNN "Manufacturer"
 	1    10300 1750
 	1    0    0    -1  
@@ -1873,4 +1873,12 @@ $EndComp
 Connection ~ 7050 850 
 Text Label 6550 1000 1    50   ~ 0
 FC_5V
+Wire Notes Line
+	6300 3400 6300 6350
+Wire Notes Line
+	6300 6350 11150 6350
+Wire Notes Line
+	11150 6350 11150 3400
+Wire Notes Line
+	11150 3400 6300 3400
 $EndSCHEMATC
