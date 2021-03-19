@@ -28,8 +28,8 @@ Text Notes 8400 4050 0    50   ~ 0
 M1
 Text Notes 8350 5350 0    50   ~ 0
 M2
-Text Notes 750  3150 0    50   ~ 0
-2x2 18650 Batteries. Thus 7.5-8.5V @ 5000mAh
+Text Notes 750  3200 0    50   ~ 0
+2x2 18650 Batteries. Thus 7.5-8.5V @ 4-5000mAh\nDischage current 2C, so 8-10A\n
 Text Notes 900  1150 0    50   ~ 0
 Charging Port
 $Comp
@@ -37,7 +37,7 @@ L Sensor_Current:ACS711xLCTR-12AB U2
 U 1 1 5FB05E05
 P 5600 1800
 F 0 "U2" H 5600 2381 50  0000 C CNN
-F 1 "ACS711xLCTR-12AB" H 5600 2290 50  0000 C CNN
+F 1 "ACS711ELCTR-12AB-T" H 5600 2290 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5950 1750 50  0001 L CIN
 F 3 "http://www.allegromicro.com/~/Media/Files/Datasheets/ACS711-Datasheet.ashx" H 5600 1800 50  0001 C CNN
 F 4 "620-1370-1-ND" H 5600 1800 50  0001 C CNN "SPN"
@@ -106,8 +106,6 @@ Wire Wire Line
 	5600 1400 5600 1150
 Text Notes 7950 1300 0    50   ~ 0
 Flight Controller Power (5.3V, 3A)
-Wire Wire Line
-	5800 2400 6150 2400
 Wire Wire Line
 	5800 2200 5800 2400
 $Comp
@@ -401,10 +399,6 @@ F 6 "C&K" H 6900 4900 50  0001 C CNN "Manufacturer"
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	9550 3950 9450 3950
-Wire Wire Line
-	9600 5200 9500 5200
-Wire Wire Line
 	8450 1950 8350 1950
 Wire Wire Line
 	8350 1950 8350 1750
@@ -694,9 +688,10 @@ F 0 "J7" H 10500 5667 50  0000 C CNN
 F 1 "Conn_02x03_Counter_Clockwise" H 10500 5576 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 10450 5350 50  0001 C CNN
 F 3 "~" H 10450 5350 50  0001 C CNN
-F 4 "PPPC032LFBN-RC" H 10450 5350 50  0001 C CNN "MPN"
-F 5 "S7106-ND" H 10450 5350 50  0001 C CNN "SPN"
-F 6 "Sullins Connector Solutions" H 10450 5350 50  0001 C CNN "Manufacturer"
+F 4 "nf" H 10450 5350 50  0001 C CNN "MPN"
+F 5 "nf" H 10450 5350 50  0001 C CNN "SPN"
+F 6 "nf" H 10450 5350 50  0001 C CNN "Manufacturer"
+F 7 "dnf" H 10450 5350 50  0001 C CNN "fit_field"
 	1    10450 5350
 	1    0    0    -1  
 $EndComp
@@ -1179,9 +1174,9 @@ Connection ~ 7250 850
 Text Label 7250 1100 1    50   ~ 0
 FC_5V
 Wire Wire Line
-	9050 3950 8750 3950
+	9050 3950 9000 3950
 Wire Wire Line
-	9100 5200 8800 5200
+	9100 5200 9050 5200
 Text Label 8750 3950 0    50   ~ 0
 FC_5V
 Text Label 8800 5200 0    50   ~ 0
@@ -1190,11 +1185,11 @@ Wire Wire Line
 	6700 4800 6500 4800
 Text Label 6500 4800 0    50   ~ 0
 FC_5V
-Text Label 5800 2400 0    50   ~ 0
+Text Label 6200 2400 0    50   ~ 0
 VIN
 Text Label 7600 1750 0    50   ~ 0
 VIN
-Text Label 9550 3950 0    50   ~ 0
+Text Label 9400 3950 0    50   ~ 0
 VIN
 Text Label 9600 5200 0    50   ~ 0
 VIN
@@ -1459,8 +1454,6 @@ $EndComp
 Connection ~ 1800 2800
 Wire Wire Line
 	1800 2800 1900 2800
-Text Notes 2150 1450 0    50   ~ 0
-ADD UVLO???
 $Comp
 L Connector_Generic:Conn_02x03_Counter_Clockwise J6
 U 1 1 5FBFBBB4
@@ -1469,9 +1462,10 @@ F 0 "J6" H 10450 4667 50  0000 C CNN
 F 1 "Conn_02x03_Counter_Clockwise" H 10450 4576 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 10400 4350 50  0001 C CNN
 F 3 "~" H 10400 4350 50  0001 C CNN
-F 4 "PPPC032LFBN-RC" H 10400 4350 50  0001 C CNN "MPN"
-F 5 "S7106-ND" H 10400 4350 50  0001 C CNN "SPN"
-F 6 "Sullins Connector Solutions" H 10400 4350 50  0001 C CNN "Manufacturer"
+F 4 "nf" H 10400 4350 50  0001 C CNN "MPN"
+F 5 "nf" H 10400 4350 50  0001 C CNN "SPN"
+F 6 "nf" H 10400 4350 50  0001 C CNN "Manufacturer"
+F 7 "dnf" H 10400 4350 50  0001 C CNN "fit_field"
 	1    10400 4350
 	1    0    0    -1  
 $EndComp
@@ -1530,31 +1524,6 @@ Wire Wire Line
 	10200 5350 10250 5350
 Connection ~ 10750 5450
 $Comp
-L Device:D_Schottky D4
-U 1 1 5FC09B86
-P 6350 2250
-F 0 "D4" V 6396 2170 50  0000 R CNN
-F 1 "D_Schottky" V 6305 2170 50  0000 R CNN
-F 2 "Diode_SMD:D_SOD-323" H 6350 2250 50  0001 C CNN
-F 3 "~" H 6350 2250 50  0001 C CNN
-F 4 "BAT60AE6327HTSA1" H 6350 2250 50  0001 C CNN "MPN"
-F 5 "BAT60AE6327HTSA1CT-ND" H 6350 2250 50  0001 C CNN "SPN"
-F 6 "Infineon Technologies" H 6350 2250 50  0001 C CNN "Manufacturer"
-	1    6350 2250
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0102
-U 1 1 5FC12218
-P 6350 2100
-F 0 "#PWR0102" H 6350 1850 50  0001 C CNN
-F 1 "GND" H 6355 1927 50  0000 C CNN
-F 2 "" H 6350 2100 50  0001 C CNN
-F 3 "" H 6350 2100 50  0001 C CNN
-	1    6350 2100
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:CP C16
 U 1 1 5FC15263
 P 5550 6650
@@ -1579,31 +1548,8 @@ F 3 "" H 5550 6500 50  0001 C CNN
 	1    5550 6500
 	-1   0    0    1   
 $EndComp
-Connection ~ 6350 2400
-Wire Wire Line
-	6350 2400 6750 2400
 Wire Wire Line
 	3850 1450 4500 1450
-$Comp
-L Device:D_Schottky D5
-U 1 1 5FC44007
-P 6150 2250
-F 0 "D5" V 6196 2170 50  0000 R CNN
-F 1 "D_Schottky" V 6105 2170 50  0000 R CNN
-F 2 "Diode_SMD:D_SOD-323" H 6150 2250 50  0001 C CNN
-F 3 "~" H 6150 2250 50  0001 C CNN
-F 4 "BAT60AE6327HTSA1" H 6150 2250 50  0001 C CNN "MPN"
-F 5 "BAT60AE6327HTSA1CT-ND" H 6150 2250 50  0001 C CNN "SPN"
-F 6 "Infineon Technologies" H 6150 2250 50  0001 C CNN "Manufacturer"
-	1    6150 2250
-	0    -1   -1   0   
-$EndComp
-Connection ~ 6150 2400
-Wire Wire Line
-	6150 2400 6350 2400
-Wire Wire Line
-	6150 2100 6350 2100
-Connection ~ 6350 2100
 Wire Wire Line
 	7200 4900 8200 4900
 $Comp
@@ -1658,7 +1604,7 @@ U 1 1 6016C36B
 P 9150 4450
 F 0 "U5" H 9150 3861 50  0000 C CNN
 F 1 "DRV8838" H 9150 3770 50  0000 C CNN
-F 2 "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm" H 9150 3600 50  0001 C CNN
+F 2 "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm_ThermalVias" H 9150 3600 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/drv8837.pdf" H 9150 4450 50  0001 C CNN
 F 4 "DRV8838DSGR" H 9150 4450 50  0001 C CNN "MPN"
 F 5 "296-40081-1-ND" H 9150 4450 50  0001 C CNN "SPN"
@@ -1672,7 +1618,7 @@ U 1 1 6016CB9F
 P 9200 5700
 F 0 "U6" H 9200 5111 50  0000 C CNN
 F 1 "DRV8838" H 9200 5020 50  0000 C CNN
-F 2 "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm" H 9200 4850 50  0001 C CNN
+F 2 "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm_ThermalVias" H 9200 4850 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/drv8837.pdf" H 9200 5700 50  0001 C CNN
 F 4 "DRV8838DSGR" H 9200 5700 50  0001 C CNN "MPN"
 F 5 "296-40081-1-ND" H 9200 5700 50  0001 C CNN "SPN"
@@ -1683,29 +1629,29 @@ $EndComp
 $Comp
 L Device:C C19
 U 1 1 6016DF36
-P 9450 3800
-F 0 "C19" H 9565 3846 50  0000 L CNN
-F 1 "100nF, 16V" H 9565 3755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 9488 3650 50  0001 C CNN
-F 3 "~" H 9450 3800 50  0001 C CNN
-F 4 "GRM155R71C104KA88D" H 9450 3800 50  0001 C CNN "MPN"
-F 5 "490-3261-1-ND" H 9450 3800 50  0001 C CNN "SPN"
-F 6 "Murata Electronics" H 9450 3800 50  0001 C CNN "Manufacturer"
-	1    9450 3800
+P 9000 3800
+F 0 "C19" H 9115 3846 50  0000 L CNN
+F 1 "100nF, 16V" H 9115 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9038 3650 50  0001 C CNN
+F 3 "~" H 9000 3800 50  0001 C CNN
+F 4 "GRM155R71C104KA88D" H 9000 3800 50  0001 C CNN "MPN"
+F 5 "490-3261-1-ND" H 9000 3800 50  0001 C CNN "SPN"
+F 6 "Murata Electronics" H 9000 3800 50  0001 C CNN "Manufacturer"
+	1    9000 3800
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:C C20
 U 1 1 6016EBF6
-P 9500 5050
-F 0 "C20" H 9615 5096 50  0000 L CNN
-F 1 "100nF, 16V" H 9615 5005 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 9538 4900 50  0001 C CNN
-F 3 "~" H 9500 5050 50  0001 C CNN
-F 4 "GRM155R71C104KA88D" H 9500 5050 50  0001 C CNN "MPN"
-F 5 "490-3261-1-ND" H 9500 5050 50  0001 C CNN "SPN"
-F 6 "Murata Electronics" H 9500 5050 50  0001 C CNN "Manufacturer"
-	1    9500 5050
+P 9050 5050
+F 0 "C20" H 9165 5096 50  0000 L CNN
+F 1 "100nF, 16V" H 9165 5005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9088 4900 50  0001 C CNN
+F 3 "~" H 9050 5050 50  0001 C CNN
+F 4 "GRM155R71C104KA88D" H 9050 5050 50  0001 C CNN "MPN"
+F 5 "490-3261-1-ND" H 9050 5050 50  0001 C CNN "SPN"
+F 6 "Murata Electronics" H 9050 5050 50  0001 C CNN "Manufacturer"
+	1    9050 5050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1759,12 +1705,6 @@ Wire Wire Line
 	7900 4700 7900 5800
 Wire Wire Line
 	8000 4600 8000 5700
-Connection ~ 9450 3950
-Wire Wire Line
-	9450 3950 9250 3950
-Connection ~ 9500 5200
-Wire Wire Line
-	9500 5200 9350 5200
 $Comp
 L power:GND #PWR0105
 U 1 1 602C0D55
@@ -1823,10 +1763,8 @@ Wire Wire Line
 	9350 5200 9200 5200
 Wire Wire Line
 	9350 4900 9500 4900
-Connection ~ 9500 4900
 Wire Wire Line
 	9250 3650 9450 3650
-Connection ~ 9450 3650
 $Comp
 L Connector_Generic:Conn_01x06 J9
 U 1 1 6022697D
@@ -1881,4 +1819,24 @@ Wire Notes Line
 	11150 6350 11150 3400
 Wire Notes Line
 	11150 3400 6300 3400
+Text Notes 750  3800 0    50   ~ 0
+Current Division:\n7A Available after switch\n2.5A for FC power\n2.5A for BEC\n2x1.8A (3.6A) for Motors
+Wire Wire Line
+	5800 2400 6750 2400
+Connection ~ 9000 3950
+Wire Wire Line
+	9000 3950 8750 3950
+Wire Wire Line
+	9250 3950 9550 3950
+Wire Wire Line
+	9000 3650 9250 3650
+Connection ~ 9250 3650
+Connection ~ 9050 5200
+Wire Wire Line
+	9050 5200 8800 5200
+Wire Wire Line
+	9350 5200 9600 5200
+Wire Wire Line
+	9350 4900 9050 4900
+Connection ~ 9350 4900
 $EndSCHEMATC
