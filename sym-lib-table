@@ -1,5 +1,4 @@
 (sym_lib_table
-  (lib (name ST_Switch)(type Legacy)(uri ${KIPRJMOD}/ST_Switch.lib)(options "")(descr ""))
   (lib (name MP_Battery)(type Legacy)(uri ${KIPRJMOD}/MP_Battery.lib)(options "")(descr ""))
   (lib (name TI_additional)(type Legacy)(uri ${KIPRJMOD}/TI_additional.lib)(options "")(descr ""))
 )
