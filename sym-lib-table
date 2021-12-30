@@ -1,4 +1,4 @@
 (sym_lib_table
-  (lib (name MP_Battery)(type Legacy)(uri ${KIPRJMOD}/MP_Battery.lib)(options "")(descr ""))
-  (lib (name TI_additional)(type Legacy)(uri ${KIPRJMOD}/TI_additional.lib)(options "")(descr ""))
+  (lib (name "Battery")(type "KiCad")(uri "${KIPRJMOD}/MP_Battery.kicad_sym")(options "")(descr ""))
+  (lib (name "TIExtra")(type "KiCad")(uri "${KIPRJMOD}/TI_additional.kicad_sym")(options "")(descr ""))
 )

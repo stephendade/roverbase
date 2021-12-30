@@ -1,4 +1,3 @@
 (fp_lib_table
-  (lib (name RomiBase)(type KiCad)(uri ${KIPRJMOD}/RomiBase.pretty)(options "")(descr ""))
-  (lib (name Vishay_IHLP-3232)(type KiCad)(uri ${KIPRJMOD}/Vishay_IHLP-3232.pretty)(options "")(descr ""))
+  (lib (name "Vishay_IHLP-3232")(type "KiCad")(uri "${KIPRJMOD}/Vishay_IHLP-3232.pretty")(options "")(descr ""))
 )
